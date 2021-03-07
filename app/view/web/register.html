@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orbe || Cadastro</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../controleEstoque/assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="../../controleEstoque/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../controleEstoque/assets/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition register-page">
+<div class="register-box">
+  <div class="register-logo">
+    <a href="#"><b>Orbe</b> C.E.</a><br>
+  </div>
+    {% if alert != null %}
+    <div class='alert alert-warning text-center' role='alert'> {{alert}} </div>
+    {% endif %}
+  <div class="card">
+    <div class="card-body register-card-body">
+      <h3 class="login-box-msg">Cadastro</h3>
+
+      <form action="http://localhost/controleEstoque/cadastrar/adminOrbe" method="post">
+        
+        <input type="hidden" name="token" value="{{token}}">
+        <div class="input-group mb-3">
+          <input type="text" name="nome" required class="form-control" placeholder="Nome">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" required name="sobrenome" placeholder="Sobrenome">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <select name="departamento" required class="form-control">
+            <option value="#" disabled selected>Escolha um Departamento</option>
+            <option value="developer">Desenvolvedor</option>
+            <option value="Administrator">Administrador</option>
+          </select>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <i class="fa fa-building" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" required name="email" placeholder="E-mail">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" required name="password" placeholder="Senha">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <i class="fa fa-key" aria-hidden="true"></i>
+
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" required name="passwordRepit" placeholder="Repita a Senha">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <i class="fa fa-key" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input type="checkbox" id="agreeTerms" required value="agree">
+              <label for="agreeTerms">
+               Eu li e concordo com os <a href="#">termos de uso.</a>
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+    </div>
+    <!-- /.form-box -->
+  </div><!-- /.card -->
+</div>
+<!-- /.register-box -->
+
+<!-- jQuery -->
+<script src="../../controleEstoque/assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../controleEstoque/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../controleEstoque/assets/dist/js/adminlte.min.js"></script>
+</body>
+</html>

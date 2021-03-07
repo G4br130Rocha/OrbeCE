@@ -1,0 +1,22 @@
+{
+    "name": "gabrielrochanogueira/estoque",
+    "description": "Controler de estoque",
+    "authors": [
+        {
+            "name": "Gabriel Rocha Nogueira",
+            "email": "gabrielrochanogueira16@gmail.com"
+        }
+    ],
+    "autoload":{
+        "psr-4": {
+          "App\\": "app/"
+        },
+        "files": [
+            "source/config/config.php"
+        ]
+    },
+    "require": {
+        "coffeecode/router": "1.0.*",
+        "twig/twig": "3.0"
+    }
+}
