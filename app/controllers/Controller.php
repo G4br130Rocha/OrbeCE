@@ -27,7 +27,7 @@ abstract class Controller{
             $loader = new \Twig\Loader\FilesystemLoader("app/view/web");
             $twig = new \Twig\Environment($loader);
             $tamplate = $twig->load($view.".html");
-
+            $param["URL"] = URL;
             $conteudo = $tamplate->render($param);
 
             echo str_replace("{{container.dinamic}}",$conteudo,$tam);
