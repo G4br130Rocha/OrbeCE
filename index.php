@@ -19,7 +19,6 @@ $router->namespace("App\Controllers");
 $router->group(null);
 $router->get("/","Web:redirect");
 $router->get("/home","Web:home");
-$router->get("/login","Web:login");
 // $router->get("/home/{id}","Web:home");
 
 /*

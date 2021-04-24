@@ -1,5 +1,5 @@
 <?php
-    define("URL","http://localhost/controleEstoque");
+    define("URL","http://localhost/OrbeCE");
     
     define("BD",[
         "DRIVER" => "mysql",
